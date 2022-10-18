@@ -14,21 +14,25 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection) {
+    let lose = "You lose! " + playerSelection +" lose to " +computerSelection;
+    let win = "You win! " + playerSelection +" beats " +computerSelection;
+    let draw = "Huftt It's a draw!";
     switch(playerSelection){
         case computerSelection:
-            return "draw";
+            return draw;
             break;
         case "rock":
-            if(computerSelection == "paper") return "lose";
-            else return "win";
+            if(computerSelection == "scissor") 
+                return win;
+            else return lose;
             break;
         case "paper":
-            if(computerSelection == "rock") return "win";
-            else return "lose";
+            if(computerSelection == "rock") return win;
+            else return lose;
             break;
         case "scissor":
-            if(computerSelection == "rock") return "lose";
-            else return "win";
+            if(computerSelection == "rock") return lose;
+            else return win;
             break;
         default:
             return "Wrong Input";
@@ -37,13 +41,15 @@ function playRound(playerSelection, computerSelection) {
     return text;
 }
 
-let n = prompt("How many times do you want to play?");
-for(i=0; i<n;i++){
-    const computerSelection = getComputerChoice();
-    console.log(computerSelection);
-
-    let playerSelection = prompt("Input your choice");
-    playerSelection = playerSelection.toLowerCase();
+function game(){
+    for(i=0; i<5;i++){
+        const computerSelection = getComputerChoice();
     
-    console.log(playRound(playerSelection, computerSelection));
+        let playerSelection = prompt("Input your choice");
+        playerSelection = playerSelection.toLowerCase();
+    
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
+
+game();
