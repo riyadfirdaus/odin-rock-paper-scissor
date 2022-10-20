@@ -1,6 +1,9 @@
 let computerSelection, playerSelection;
 let scoreHuman = 0, scoreComputer = 0;
 let resultText;
+let red = '#e74c3c';
+let green = '#27ae60';
+let grey = '#2c3e50';
 
 function convertToEmoji(text){
     if(text == 'rock') return '✊';
@@ -29,12 +32,11 @@ function computeResult(result){
     else if(result == 'lose'){
         scoreComputer++;
     }
-    updateCard();
+    updateCard(result);
     if(scoreComputer == 5)
         gameOver('Oh noo, you lose!');
     if(scoreHuman == 5)
         gameOver('Yeay, you win!');
-
     return;
 }
 
@@ -60,7 +62,7 @@ function gameOver(text){
     
 }
 
-function updateCard(emoji){
+function updateCard(result){
     const cardHuman = document.querySelector('#human');
     const cardComputer = document.querySelector('#computer');
     cardHuman.querySelector('#score').innerText = scoreHuman;
@@ -68,6 +70,18 @@ function updateCard(emoji){
     cardComputer.querySelector('#score').innerText = scoreComputer;
     cardComputer.querySelector('.emoji').innerText = convertToEmoji(computerSelection);
 
+    if(result == 'draw'){
+        cardHuman.querySelector('#score').style.backgroundColor = `${grey}`;
+        cardComputer.querySelector('#score').style.backgroundColor = `${grey}`;
+    }
+    else if(result == 'win'){
+        cardHuman.querySelector('#score').style.backgroundColor = `${green}`;
+        cardComputer.querySelector('#score').style.backgroundColor = `${red}`;
+    }
+    else{
+        cardHuman.querySelector('#score').style.backgroundColor = `${red}`;
+        cardComputer.querySelector('#score').style.backgroundColor = `${green}`;
+    }
 }
 
 function playRound(playerSelection, computerSelection) {
