@@ -1,0 +1,104 @@
+*{
+    font-family: 'Roboto','Times New Roman', 'serif';
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+}
+header p{
+    font-size: 24px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#counterDisplay{
+    margin: 0 0 50px;
+    background-color:grey;
+    text-align: center;
+    padding: 24px;
+}
+#main{
+    text-align: center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+}
+.cardCounter{
+    display:flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 200px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.cardCounter > p{
+    margin: 10px;
+}
+.cardCounter #score{
+    padding:5px;
+    border-radius: 8px 8px 0 0;
+    font-weight: bolder;
+    color: white;
+    background-color: #6fba26;
+}
+
+.info{
+    width: 200px;
+    height: auto;
+}
+.choice{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji{
+    font-size: 50px;
+    margin: 16px;
+}
+
+button {
+    background-color:#6fba26;
+    padding:10px;
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-decoration:none;
+    color:#fff;
+    background-image: linear-gradient(bottom, rgb(100,170,30) 0%, rgb(129,212,51) 100%);
+    box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d;
+    border-radius: 5px;
+    border: none;
+}
+
+button:active{
+    top:7px;
+    background-image: linear-gradient(bottom, rgb(100,170,30) 100%, rgb(129,212,51) 0%);
+    box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
+    color: #156785;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+    background-color:#5e9c1f;
+}
+
+footer{
+    background-color: #1F2937;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

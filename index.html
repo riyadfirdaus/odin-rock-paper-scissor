@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Rock Paper Scissor!</title>
-        <script src="main.js"></script>
-    </head>
-    <body>
-        
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rock Paper Scissor!</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissor</h1>
+      <p>First to 5 win!</p>
+    </header>
+
+    <section id="counterDisplay">
+      <div class="container">
+        <div class="cardCounter" id="human">
+          <div id="score">0</div>
+          <div class="emoji">❓</div>
+          <p>You</p>
+        </div>
+        <div class="cardCounter" id="computer">
+          <div id="score">0</div>
+          <div class="emoji">❓</div>
+          <p>Computer</p>
+        </div>
+      </div>
+      <div class="info"></div>
+    </section>
+
+    <section id="main">
+      <h3>Choose One!</h3>
+      <div class="choice">
+        <button class="emoji" id="rock">✊</button>
+        <button class="emoji" id="paper">✋</button>
+        <button class="emoji" id="scissor">✌️</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; Riyad Firdaus 2022</p>
+    </footer>
+  </body>
 </html>
