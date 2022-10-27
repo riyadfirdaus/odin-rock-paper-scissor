@@ -32,19 +32,19 @@ header p{
 .container{
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 500px;
+    max-width: 400px;
+    min-width:fit-content;
+    margin:0 auto;
     border-radius: 10px;
     padding:1rem;
     background-color: rgb(203, 206, 209)
 }
 .cardCounter{
+    min-width: 102px;
     display:flex;
-    flex: auto;
+    flex:1;
     flex-direction: column;
     background-color: whitesmoke;
-    width: 25%;
     border-radius: 10px;
     margin: 0 10px;
 }
