@@ -34,7 +34,7 @@ header p{
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
-    width: 300px;
+    width: 500px;
     border-radius: 10px;
     padding:1rem;
     background-color: rgb(203, 206, 209)
@@ -44,13 +44,14 @@ header p{
     flex: auto;
     flex-direction: column;
     background-color: whitesmoke;
-    width: 15%;
+    width: 25%;
     border-radius: 10px;
     margin: 0 10px;
 }
 
 .cardCounter > p{
     margin: 10px;
+    padding:0;
 }
 .cardCounter #score{
     padding:5px;
@@ -59,7 +60,10 @@ header p{
     color: white;
     background-color: #27ae60;
 }
-
+.cardCounter .emoji{
+    margin: 1rem 0rem 0rem;
+    font-size: 3rem;
+}
 .info{
     width: 200px;
     height: auto;
@@ -73,7 +77,7 @@ header p{
 
 .emoji{
     font-size: 2rem;
-    margin: 0 1rem;
+    margin: 0rem 1rem;
 }
 
 footer{
