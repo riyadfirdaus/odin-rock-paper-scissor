@@ -37,4 +37,4 @@ I applied some concept such as:
 My Code now has better readability and I can review my code faster than before. For example, if there was a logic error, I could find the bugs easily when my code is clean.
 
 ## Author
-👤 **Riyad Firdaus**
+👤 [Riyad Firdaus](https://github.com/riyadfirdaus/)
